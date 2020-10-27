@@ -27,8 +27,21 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const { id_point, nama_point, geom } = req.body;
-    const insertPoint = await pool.query("INSERT INTO point (id_point, nama_point, geom) VALUES($1, $2, POINT($3)) RETURNING *", [id_point, nama_point, geom])
+    const data = { id_point, nama_point, geom}
+    const insertPoint = await pool.query("INSERT INTO point (id_point, nama_point, geom) VALUES($1, $2, POINT($3)) RETURNING *", [data])
     res.json(insertPoint.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+router.patch("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { id_point, nama_point, geom } = req.body;
+    const data = { id_point, nama_point, geom}
+    const updatePoint = await pool.query("UPDATE point SET id_point = $1, nama_point = $2, geom = $3 WHERE id_point = $1", [id, data]);
+    res.json("Point was Updated!");
   } catch (err) {
     console.error(err.message);
   }
