@@ -1,0 +1,617 @@
+{
+	"info": {
+		"_postman_id": "08b8fe53-f2d8-4c3f-83f6-11552435c9fb",
+		"name": "webGIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Point",
+			"item": [
+				{
+					"name": "GET All Point",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/v1/point",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"point"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Point By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/point/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"point",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INSERT Point",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_point",
+									"value": "PT. Nusantara Secom Infotech",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "-6.232626",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "106.821666",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/v1/point",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"point"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Point",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_point",
+									"value": "Monumen Nasional",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "-6.175232",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "106.827185",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/v1/point/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"point",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Point",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/point/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"point",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Line",
+			"item": [
+				{
+					"name": "GET All Line",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/line",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"line"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Line By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/line/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"line",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INSERT Line",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_line",
+									"value": "Jalan Gerbang Pemuda",
+									"type": "text"
+								},
+								{
+									"key": "geom",
+									"value": "LINESTRING(106.79809570312499 -6.214409881259834, 106.80783748626709 -6.212020738661808)",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "Jakarta, Indonesia",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/v1/line",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"line"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Line",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_line",
+									"value": "Jl. Gerbang Pemuda",
+									"type": "text"
+								},
+								{
+									"key": "geom",
+									"value": "LINESTRING(106.79809570312499 -6.214409881259834, 106.80783748626709 -6.212020738661808)",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "Jakarta",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/v1/line/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"line",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Line",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/line/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"line",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Polygon",
+			"item": [
+				{
+					"name": "GET All Polygon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/polygon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"polygon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Polygon By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/polygon/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"polygon",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INSERT Polygon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_polygon",
+									"value": "GBK",
+									"type": "text"
+								},
+								{
+									"key": "geom",
+									"value": "POLYGON((106.79792404174805 -6.214495207580589, 106.79805278778076 -6.22059600363985, 106.80298805236816 -6.222430494905031, 106.80483341217041 -6.224904914838613, 106.81242942810059 -6.219444110503, 106.80715084075928 -6.212362045411244, 106.79792404174805 -6.214495207580589))",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "Gelora Bung Karno Jakarta",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/v1/polygon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"polygon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Polygon",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_polygon",
+									"value": "Stadion Gelora Bung Karno",
+									"type": "text"
+								},
+								{
+									"key": "geom",
+									"value": "POLYGON((106.79792404174805 -6.214495207580589, 106.79805278778076 -6.22059600363985, 106.80298805236816 -6.222430494905031, 106.80483341217041 -6.224904914838613, 106.81242942810059 -6.219444110503, 106.80715084075928 -6.212362045411244, 106.79792404174805 -6.214495207580589))",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "Jakarta, Indonesia",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/v1/polygon/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"polygon",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Polygon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/v1/polygon/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"v1",
+								"polygon",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

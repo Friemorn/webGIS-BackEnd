@@ -7,7 +7,7 @@ module.exports = router
 
 router.get("/", async (req, res) => {
   try {
-    const allPoint = await pool.query("SELECT id_point, nama_point, geom, ST_AsGeoJSON(geom) AS coordinates, ST_AsGeoJSON(geom) AS coordinates FROM point")
+    const allPoint = await pool.query("SELECT id_point, nama_point, geom, ST_AsGeoJSON(geom) AS koordinat FROM point")
     res.json(allPoint.rows)
   } catch (err) {
     console.error(err.message)
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params
-    const pointById = await pool.query("SELECT id_point, nama_point, geom, ST_AsGeoJSON(geom) AS coordinates, ST_AsGeoJSON(geom) AS coordinates FROM point WHERE id_point = $1", [id])
+    const pointById = await pool.query("SELECT id_point, nama_point, geom, ST_AsGeoJSON(geom) AS koordinat FROM point WHERE id_point = $1", [id])
     res.json(pointById.rows)
   } catch (err) {
     console.error(err.message)

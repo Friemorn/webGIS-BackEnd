@@ -7,7 +7,7 @@ module.exports = router
 
 router.get("/", async (req, res) => {
   try {
-    const allLine = await pool.query("SELECT id_line, nama_line, geom, ST_AsGeoJSON(geom) AS coordinates, SUM(ST_Length(geom))/1000 AS panjang_garis, deskripsi FROM line GROUP BY id_line")
+    const allLine = await pool.query("SELECT id_line, nama_line, geom, ST_AsGeoJSON(geom) AS koordinat, SUM(ST_Length(geom)) AS panjang_garis, deskripsi FROM line GROUP BY id_line")
     res.json(allLine.rows)
   } catch (err) {
     console.error(err.message)
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params
-    const lineById = await pool.query("SELECT id_line, nama_line, geom, ST_AsGeoJSON(geom) AS coordinates, SUM(ST_Length(geom))/1000 AS panjang_garis, deskripsi FROM line WHERE id_line = $1 GROUP BY id_line", [id])
+    const lineById = await pool.query("SELECT id_line, nama_line, geom, ST_AsGeoJSON(geom) AS koordinat, SUM(ST_Length(geom)) AS panjang_garis, deskripsi FROM line WHERE id_line = $1 GROUP BY id_line", [id])
     res.json(lineById.rows)
   } catch (err) {
     console.error(err.message)

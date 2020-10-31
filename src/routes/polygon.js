@@ -7,7 +7,7 @@ module.exports = router
 
 router.get("/", async (req, res) => {
   try {
-    const allPolygon = await pool.query("SELECT id_polygon, nama_polygon, geom, ST_AsGeoJSON(geom) AS coordinates, SUM(ST_Area(geom))/1000 AS luas_area, deskripsi FROM polygon GROUP BY id_polygon")
+    const allPolygon = await pool.query("SELECT id_polygon, nama_polygon, geom, ST_AsGeoJSON(geom) AS koordinat, SUM(ST_Area(geom)) AS luas_area, deskripsi FROM polygon GROUP BY id_polygon")
     res.json(allPolygon.rows)
   } catch (err) {
     console.error(err.message)
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params
-    const polygonById = await pool.query("SELECT id_polygon, nama_polygon, geom, ST_AsGeoJSON(geom) AS coordinates, SUM(ST_Area(geom))/1000 AS luas_area, deskripsi FROM polygon WHERE id_polygon = $1 GROUP BY id_polygon", [id])
+    const polygonById = await pool.query("SELECT id_polygon, nama_polygon, geom, ST_AsGeoJSON(geom) AS koordinat, SUM(ST_Area(geom)) AS luas_area, deskripsi FROM polygon WHERE id_polygon = $1 GROUP BY id_polygon", [id])
     res.json(polygonById.rows)
   } catch (err) {
     console.error(err.message)
