@@ -21,7 +21,7 @@
 * [Express](https://www.npmjs.com/package/express)
 * [Express Promise Router](https://www.npmjs.com/package/express-promise-router)
 * [Morgan](https://www.npmjs.com/package/morgan)
-* [Node Postgres](https://www.npmjs.com/package/pg)
+* [Node-Postgres](https://www.npmjs.com/package/pg)
 
 ## Setup .env example
 
