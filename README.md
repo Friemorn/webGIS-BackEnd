@@ -1,36 +1,41 @@
 # webGIS-BackEnd
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Friemorn/POS-App-Cafe-BackEnd-Intermediate)
-![GitHub stars](https://img.shields.io/github/stars/Friemorn/POS-App-Cafe-BackEnd-Intermediate?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Friemorn/POS-App-Cafe-BackEnd-Intermediate?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/Friemorn/webGIS-BackEnd)
+![GitHub stars](https://img.shields.io/github/stars/Friemorn/webGIS-BackEnd?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Friemorn/webGIS-BackEnd?style=social)
 
 ## Built With
 * [Node.js](https://nodejs.org/en/)
 * [Express.js](https://expressjs.com/)
+* [Postgresql](https://www.postgresql.org/)
 
 ## Requirements
 * [Node.js](https://nodejs.org/en/)
-* [Database](ufotable_cafe.sql)
-* [Postman](Cafe.postman_collection.json)
+* [Database](geo.sql)
+* [Postman](webGIS.postman_collection.json)
 
 ## NPM Package
 * [Body-parser](https://www.npmjs.com/package/body-parser)
 * [Cors](https://www.npmjs.com/package/cors)
 * [Dotenv](https://www.npmjs.com/package/dotenv)
 * [Express](https://www.npmjs.com/package/express)
+* [Express Promise Router](https://www.npmjs.com/package/express-promise-router)
 * [Morgan](https://www.npmjs.com/package/morgan)
+* [Node Postgres](https://www.npmjs.com/package/pg)
+
 ## Setup .env example
 
 Create .env file in your root project folder.
 
 ```env
 
-DB_HOST = localhost
-DB_USER = "your database username"
-DB_PASSWORD = "your database password"
-DB_DATABASE = ufotable_cafe
-PORT = "your port"
-BASE_URL = "your url"
+DB_HOST = "your DB Host"
+DB_USER = "your DB user"
+DB_PASSWORD = "your DB Password"
+DB_DATABASE = geo
+DB_PORT = "your DB Port"
+PORT = "your Port"
+BASE_URL = "your URL"/api/v1/
 
 ```
 
@@ -55,9 +60,6 @@ npm run lint
 ```
 standard --fix 
 ```
-
-### Test Deployment Website
-[ufotablecafe.fwdev.online](http://ufotablecafe.fwdev.online/)
 
 ## Contact
 
